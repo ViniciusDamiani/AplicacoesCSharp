@@ -4,55 +4,40 @@ namespace LearningCSharp
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            //Criando o objeto "house1" que terá acesso aos metodos e atributos da classe House
-            House house1 = new House();
+            //Aula 01 - Variaveis 
+            Aula01_CSharp.Aula01();
 
-            //Setando valores para o Objeto
-            house1.Address = "Rua Martinho Brunelli";
-            house1.Color = "Azul";
+            Console.WriteLine("\n------------------\n");
 
-            BankAccount bankAccount = new BankAccount();
-            bankAccount.PersonName = "Vinicius Damiani";
-            bankAccount.Balance = 0;
-            bankAccount.Deposit(amount : 100);
-            bankAccount.ShowDetails();
-        }
-    }
+            //Aula 02 - Scopo de Variaveis
+            Aula02_CSharp.Aula02();
 
-    public class House
-    {
-        //Atributos da classe
-        public string Address;
-        public string Color;
+            Console.WriteLine("\n------------------\n");
 
-        //Métodos
-        public void TurnOnLight()
-        {
-            Console.WriteLine("Acende a Luz");
+            //Aula 03 - Operadores e Operações
+            Aula03_CSharp.Aula03();
+
+            Console.WriteLine("\n------------------\n");
+
+            //Aula 04 - Formatando saída do console
+            Aula04_CSharp.Aula04();
+
+            Console.WriteLine("\n------------------\n");
+
+            //Aula 06 - Comentando a aplicação + Bloco Region
+            Aula06_CSharp.Aula06();
+
+            Console.WriteLine("\n------------------\n");
+
+            //Aula 07 - Variaveis e tipos de dados
+            Aula07_CSharp.Aula07();
+
+            Console.WriteLine("\n------------------\n");
+
+
             Console.ReadKey();
-        }
-        public void TurnOffLight()
-        {
-            Console.WriteLine("Apagar a Luz");
-            Console.ReadKey();
-        }
-    }
-
-    public class BankAccount
-    {
-        public string PersonName;
-        public decimal Balance;
-
-        public void Deposit(decimal amount)
-        {
-            Balance += amount;
-        }
-
-        public void ShowDetails()
-        {
-            Console.WriteLine($"{PersonName} possui saldo de {Balance:C2}");
         }
 
     }
